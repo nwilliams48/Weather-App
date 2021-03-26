@@ -1,0 +1,20 @@
+h2 {
+  display: inline;
+}
+
+i {
+  font-size: 30px;
+}
+.container {
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+}
+
+.row {
+  padding: 20px;
+  text-align: center;
+}

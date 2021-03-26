@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/71c522b22f.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Jiji's Weather Genie</title>
+    <link rel="stylesheet" href="src/styles.css" />
+
+</head>
+
+<body>
+    <div class="container">
+        <form id="search-form">
+            <input type="text" placeholder="Enter city" autocomplete="off" autofocus="off" id="search-text-input" />
+            <input type="submit" value="Search" />
+            <input type="submit" id="current-location" value="Current Location" />
+        </form>
+
+        <div class="row">
+            <div class="col-sm">
+                <h1>
+                    Search City
+                </h1>
+
+            </div>
+
+            <div class="col-sm">
+                <i class="far fa-snowflake"></i>
+                <h2>
+                    25°
+                </h2>
+                <br />
+                <span id="current-day">
+                    TUE 12:00PM
+                </span>
+                <br />
+                Snow
+            </div>
+
+            <div class="col-sm">
+                <p>
+                    Chance of Rain: 50%
+                    <br />
+                    Winds: 2MPH
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">WED</h5>
+                        <i class="fas fa-cloud-sun"></i>
+                        <p class="card-text">8°</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">THU</h5>
+                        <i class="fas fa-cloud-sun-rain"></i>
+                        <p class="card-text">15°</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">FRI</h5>
+                        <i class="far fa-snowflake"></i>
+                        <p class="card-text">23°</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">SAT</h5>
+                        <i class="fas fa-cloud-showers-heavy"></i>
+                        <p class="card-text">25°</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">SUN</h5>
+                        <i class="fas fa-cloud-sun-rain"></i>
+                        <p class="card-text">41°</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">MON</h5>
+                        <i class="far fa-snowflake"></i>
+                        <p class="card-text">50°</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="src/index.js"></script>
+</body>
+
+</html>
