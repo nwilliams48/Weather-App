@@ -19,6 +19,6 @@ i {
   text-align: center;
 }
 .weather-app-footer {
-  max-width: 800px;
+  width: 800px;
   margin: 0 auto;
 }
