@@ -18,3 +18,7 @@ i {
   padding: 20px;
   text-align: center;
 }
+.weather-app-footer {
+  max-width: 800px;
+  margin: 0 auto;
+}
