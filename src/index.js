@@ -15,6 +15,7 @@ function currentDate(now) {
 }
 
 function currentTemperature(response) {
+
   let temperature = Math.round(response.data.main.temp);
   let h2 = document.querySelector("h2");
   h2.innerHTML = `${temperature}`;
@@ -33,7 +34,6 @@ function search(event) {
 }
 
 function showCurrentTemperature(response) {
-  console.log(response.data);
   let temperature = Math.round(response.data.main.temp);
   let heading = document.querySelector("h2");
   heading.innerHTML = `${temperature}`;
@@ -42,7 +42,6 @@ function showCurrentTemperature(response) {
 }
 
 function retrievePosition(position) {
-  console.log(position);
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
   let apiKey = "33098ebc3e6d70b785afa638f3f87592";
