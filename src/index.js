@@ -19,6 +19,8 @@ function currentTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let h2 = document.querySelector("h2");
   h2.innerHTML = `${temperature}`;
+  let descriptionElement = document.querySelector("#description")
+  descriptionElement.innerHTML = response.data.weather[0].description;
 }
 
 function search(event) {
