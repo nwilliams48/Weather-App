@@ -17,7 +17,7 @@ function currentDate(now) {
 function currentTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let h2 = document.querySelector("h2");
-  h2.innerHTML = `${temperature}°F`;
+  h2.innerHTML = `${temperature}`;
 }
 
 function search(event) {
@@ -33,9 +33,10 @@ function search(event) {
 }
 
 function showCurrentTemperature(response) {
+  console.log(response.data);
   let temperature = Math.round(response.data.main.temp);
   let heading = document.querySelector("h2");
-  heading.innerHTML = `${temperature}℉`;
+  heading.innerHTML = `${temperature}`;
   let h1 = document.querySelector("h1");
   h1.innerHTML = `${response.data.name}`;
 }
