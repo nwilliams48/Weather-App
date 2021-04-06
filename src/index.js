@@ -15,7 +15,7 @@ function currentDate(now) {
 }
 
 function currentTemperature(response) {
-
+  console.log(response.data)
   let temperature = Math.round(response.data.main.temp);
   let h2 = document.querySelector("h2");
   h2.innerHTML = `${temperature}`;
