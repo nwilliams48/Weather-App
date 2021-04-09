@@ -22,7 +22,7 @@ function currentTemperature(response) {
   let descriptionElement = document.querySelector("#description")
   descriptionElement.innerHTML = response.data.weather[0].description;
   let windElement = document.querySelector("#wind");
-  windElement.innerHTML = Math.round(response.data.wind.speed);
+  windElement.innerHTML = response.data.wind.speed;
 }
 
 function search(event) {
