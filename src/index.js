@@ -39,7 +39,7 @@ function displayForecast(response) {
                 <img
                     src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
                     alt=""
-                    class="float-left"
+                    width= "42"
                 />
                 <p class="weather-forecast-temperatures">
                   <span class="weather-forecast-temperature-max">
