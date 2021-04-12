@@ -23,7 +23,7 @@ function currentTemperature(response) {
   descriptionElement.innerHTML = response.data.weather[0].description;
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = response.data.wind.speed;
-  let humidityElement = document.querySelector("#humidty");
+  let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = response.data.main.humidity;
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
