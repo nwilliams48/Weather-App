@@ -14,6 +14,35 @@ function currentDate(now) {
   return `${day} ${hour}:${minute}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML = forecastHTML + `
+      <div class="col-sm">
+          <div class="card">
+            <div class="card-body">
+               <h5 class="card-title">${day}</h5>
+                <i class="fas fa-cloud-sun"></i>
+                <p class="weather-forecast-temperatures">
+                  <span class="weather-forecast-temperature-max">
+                    8°</span>
+                  <span class="weather-forecast-temperature-min">
+                    5°</span>
+                </p>
+            </div>
+          </div>
+        </div>
+  `;
+  });
+
+  
+  forecastHTML = `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function currentTemperature(response) {
   console.log(response.data)
   let temperature = Math.round(response.data.main.temp);
@@ -30,6 +59,8 @@ function currentTemperature(response) {
     "src", 
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
+  
+  
 }
 
 function search(event) {
@@ -75,5 +106,7 @@ let currentDay = document.querySelector("#current-day");
 currentDay.innerHTML = currentDate(now);
 
 let form = document.querySelector("#search-form");
+
+displayForecast();
 
 form.addEventListener("submit", search);
