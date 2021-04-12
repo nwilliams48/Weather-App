@@ -20,7 +20,7 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  
   days.forEach(function (forecastDay) {
     forecastHTML = forecastHTML + `
       <div class="col-sm">
@@ -28,7 +28,7 @@ function displayForecast(response) {
             <div class="card-body">
                <h5 class="card-title">${forecastDay.dt}</h5>
                 <img
-                    src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
+                    src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
                     alt=""
                     class="float-left"
                 />
