@@ -128,11 +128,16 @@ function getPosition(event) {
 
 function displayCelsiusTemperature(event) {
   event.preventDefault();
-  let tempElement = document.querySelector("#temp)")
+  let tempElement = document.querySelector("#temp")
   let celsiusTemperature = (fahrenheitTemperatrue - 32) * 5 / 9;
   tempElement.innerHTML = Math.round(celsiusTemperature);
   
 }
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+let fahrenheitTemperatrue = null;
 
 let currentButton = document.querySelector("#current-location");
 currentButton.addEventListener("click", getPosition);
@@ -144,10 +149,8 @@ currentDay.innerHTML = currentDate(now);
 
 let form = document.querySelector("#search-form");
 
-
 form.addEventListener("submit", search);
 
-let fahrenheitTemperatrue = null;
 
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+
