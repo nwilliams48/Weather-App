@@ -21,7 +21,7 @@ function displayForecast(response) {
 
   let forecastHTML = `<div class="row">`;
   
-  days.forEach(function (forecastDay) {
+  forecast.forEach(function (forecastDay) {
     forecastHTML = forecastHTML + `
       <div class="col-sm">
           <div class="card">
