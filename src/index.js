@@ -15,23 +15,28 @@ function currentDate(now) {
 }
 
 function displayForecast(response) {
-  console.log(response.data);
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  days.forEach(function (day) {
+  days.forEach(function (forecastDay) {
     forecastHTML = forecastHTML + `
       <div class="col-sm">
           <div class="card">
             <div class="card-body">
-               <h5 class="card-title">${day}</h5>
-                <i class="fas fa-cloud-sun"></i>
+               <h5 class="card-title">${forecastDay.dt}</h5>
+                <img
+                    src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
+                    alt=""
+                    width="42"
+                />
                 <p class="weather-forecast-temperatures">
                   <span class="weather-forecast-temperature-max">
-                    8°</span>
+                    ${forecastDay.temp.max}°</span>
                   <span class="weather-forecast-temperature-min">
-                    5°</span>
+                    ${forecastDay.temp.min}°</span>
                 </p>
             </div>
           </div>
