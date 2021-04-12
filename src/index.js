@@ -130,9 +130,16 @@ function displayCelsiusTemperature(event) {
   event.preventDefault();
   let tempElement = document.querySelector("#temp")
   let celsiusTemperature = (fahrenheitTemperatrue - 32) * 5 / 9;
-  tempElement.innerHTML = Math.round(celsiusTemperature);
-  
+  tempElement.innerHTML = Math.round(celsiusTemperature); 
 }
+
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  tempElement.innerHTML = Math.round(fahrenheitTemperatrue);
+}
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
