@@ -44,6 +44,15 @@ function displayForecast() {
   console.log(forecastHTML);
 }
 
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let latitude = coordinates.lat;
+  let longitude = coordinates.lon;
+  let apiKey = "33098ebc3e6d70b785afa638f3f87592";
+  let units = "imperial";
+  let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude={part}&appid=${apiKey}`;
+}
+
 function currentTemperature(response) {
   console.log(response.data)
   let temperature = Math.round(response.data.main.temp);
@@ -61,7 +70,7 @@ function currentTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
   
-  
+  getForecast(response.data.coord);
 }
 
 function search(event) {
