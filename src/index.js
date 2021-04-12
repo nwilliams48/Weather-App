@@ -14,7 +14,8 @@ function currentDate(now) {
   return `${day} ${hour}:${minute}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data);
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -51,7 +52,7 @@ function getForecast(coordinates) {
   let apiKey = "33098ebc3e6d70b785afa638f3f87592";
   let units = "imperial";
   let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude={part}&appid=${apiKey}&units=${units}`;
-  console.log(apiURL);
+  axios.get(apiURL).then(displayForecast);
 }
 
 function currentTemperature(response) {
@@ -118,6 +119,5 @@ currentDay.innerHTML = currentDate(now);
 
 let form = document.querySelector("#search-form");
 
-displayForecast();
 
 form.addEventListener("submit", search);
