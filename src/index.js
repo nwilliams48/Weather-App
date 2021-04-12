@@ -20,7 +20,6 @@ function formatDay(timestamp) {
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   return days[day];
-
 }
 
 function displayForecast(response) {
@@ -43,9 +42,9 @@ function displayForecast(response) {
                 />
                 <p class="weather-forecast-temperatures">
                   <span class="weather-forecast-temperature-max">
-                    ${forecastDay.temp.max}°</span>
+                    ${Math.round(forecastDay.temp.max)}°</span>
                   <span class="weather-forecast-temperature-min">
-                    ${forecastDay.temp.min}°</span>
+                    ${Math.round(forecastDay.temp.min)}°</span>
                 </p>
             </div>
           </div>
