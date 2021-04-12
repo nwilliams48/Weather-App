@@ -135,6 +135,7 @@ function displayCelsiusTemperature(event) {
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
+  let tempElement = document.querySelector("#temp");
   tempElement.innerHTML = Math.round(fahrenheitTemperatrue);
 }
 
