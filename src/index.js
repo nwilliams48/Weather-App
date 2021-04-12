@@ -14,6 +14,15 @@ function currentDate(now) {
   return `${day} ${hour}:${minute}`;
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+
+}
+
 function displayForecast(response) {
   let forecast = response.data.daily;
 
@@ -26,7 +35,7 @@ function displayForecast(response) {
       <div class="col-sm">
           <div class="card">
             <div class="card-body">
-               <h5 class="card-title">${forecastDay.dt}</h5>
+               <h5 class="card-title">${formatDay(forecastDay.dt)}</h5>
                 <img
                     src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
                     alt=""
