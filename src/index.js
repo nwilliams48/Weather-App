@@ -129,7 +129,7 @@ function getPosition(event) {
 function displayCelsiusTemperature(event) {
   event.preventDefault();
   let tempElement = document.querySelector("#temp)")
-  let celsiusTemperature = (fahrenheitTemperatrue - 32) * 5/9;
+  let celsiusTemperature = (fahrenheitTemperatrue - 32) * 5 / 9;
   tempElement.innerHTML = Math.round(celsiusTemperature);
   
 }
