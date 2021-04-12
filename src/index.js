@@ -30,7 +30,7 @@ function displayForecast(response) {
                 <img
                     src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
                     alt=""
-                    width="42"
+                    class="float-left"
                 />
                 <p class="weather-forecast-temperatures">
                   <span class="weather-forecast-temperature-max">
